@@ -7,24 +7,19 @@ coloque nas sessões indicadas*/
     padding: 0;
 }
 
-/* html {
-    font-size: 62,5%;
-} */
-
 :root{
-    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
    --cor-de-fundo-section: #EAF2FD;
+   --cor-de-link: #000;
+   --cor-de-texto: #fff;
+   --cor-de-font: #464646;
+   --cor-de-botao: #2A7AE4;
 }
 
 body {
     box-sizing: border-box;
     background-color: var(--cor-de-fundo) ;
     font-family: 'Raleway';
-    margin: 0;
-    padding: 0;
     line-height: 1;
 }
 ol, ul,li {
@@ -63,17 +58,39 @@ section.menu{
     align-items: center;
 }
 
-.menu__list__item__contato {
-    display: none;
-}
-
 .menu__title {
-    
+    color: var(--cor-de-font);
 }
 
 .menu__list {
     display: flex;
     gap: 32px;
+}
+
+.menu__list__item {
+    position: relative;
+    color: var(--cor-de-font);
+}
+
+.menu__list__item::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor-de-font);
+    transition: all 300ms ease-in-out;
+}
+
+.menu__list__item:hover::after {
+    width: 100%;
+    left: 0%;
+}
+
+.menu__list__item__contato {
+    display: none;
+    color: var(--cor-de-font);
 }
 
 /*Sessão Title*/
@@ -113,7 +130,13 @@ section.title{
 
 .title__bio {
     font-size: 52px;
-    font-weight: 500;
+    font-weight: bold;
+    color: var(--cor-de-font);
+}
+
+.title__subsection {
+    font-size: 22px;
+    color: var(--cor-de-font);
 }
 
 .title__container > ul {
@@ -147,13 +170,14 @@ section.about{
 .about__title {
     font-size: 32px;
     font-weight: bold;
+    color: var(--cor-de-font);
     margin-bottom: 132px;
 }
 
 .about__paragraph {
+    color: var(--cor-de-font);
     width: 100%;
-    margin-bottom: 16px;
-    
+    margin-bottom: 16px; 
 }
 
 /*Sessão Skills*/
@@ -173,6 +197,7 @@ section.about{
 .skills__title {
     font-size: 32px;
     font-weight: bold;
+    color: var(--cor-de-font);
     margin-top: 32px;
 }
 
@@ -187,10 +212,14 @@ section.about{
     width: 140px;
     height: 140px;
     padding: 16px;
-    background-color: #fff;
+    background-color: var(--cor-de-texto);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.skills__name {
+    color: var(--cor-de-font);
 }
 
 /*Sessão Hobbies*/
@@ -209,6 +238,7 @@ section.hobbies{
 .hobbies__title {
     font-size: 32px;
     font-weight: bold;
+    color: var(--cor-de-font);
     margin-top: 32px;
 }
 
@@ -223,10 +253,14 @@ section.hobbies{
     width: 140px;
     height: 140px;
     padding: 16px;
-    background-color: #fff;
+    background-color: var(--cor-de-texto);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.hobbies__name {
+    color: var(--cor-de-font);
 }
 
 /* Experiência Acadêmica*/
@@ -239,6 +273,7 @@ section.academic{
 .academic__title {
     font-size: 32px;
     font-weight: bold;
+    color: var(--cor-de-font);
     text-align: center;
     margin-bottom: 32px;
 }
@@ -264,14 +299,16 @@ section.academic{
     width: 100%;
 }
 
-.courses__item__title {
+.academic__courses__item__title {
     font-size: 22px;
     font-weight: bold;
+    color: var(--cor-de-font);
 }
 
-.courses__item__subtitle {
+.academic__courses__item__subtitle {
     font-size: 16px;
     font-weight: normal;
+    color: var(--cor-de-font);
 }
 
 /* experiência*/
@@ -289,18 +326,19 @@ section.experience {
 .experience__section__title {
     font-size: 32px;
     font-weight: bold;
+    color: var(--cor-de-font);
 }
 
 .experiencia__botao--repo, .experiencia__botao--demo {
     cursor: pointer;
     padding: 16px;
-    border: 1px solid #2A7AE4;
-    color: #2A7AE4;
+    border: 1px solid var(--cor-de-botao);
+    color: var(--cor-de-botao);
 }
 
 .experiencia__botao--demo {
-    background-color: #2A7AE4;
-    color: #fff;
+    background-color: var(--cor-de-botao);
+    color: var(--cor-de-texto);
 }
 
 .experiencie__box {
@@ -335,11 +373,13 @@ section.experience {
     font-family: 'Raleway', sans-serif;
     font-size: 22px;
     font-weight: bold;
+    color: var(--cor-de-font);
 }
 
 .experience__text {
     font-size: 16px;
     font-weight: 400;
+    color: var(--cor-de-font);
 }
 
 /*Contato*/
@@ -394,11 +434,21 @@ section.formcontato{
     font-size: 30px;
     padding: 5px;
     border: 0;
+    color: var(--cor-de-font);
 }
 
 .formcontato__title {
     font-size: 32px;
     font-weight: bold;
+    color: var(--cor-de-font);
+}
+
+.formcontato__subtext {
+    color: var(--cor-de-font);
+}
+
+label {
+    color: var(--cor-de-font);
 }
 
 .formcontato__textarea {
@@ -409,14 +459,13 @@ section.formcontato{
 
 .formcontato__textarea::placeholder {
     font-size: 30px;
-    text-align: ;
 }
 
 .formcontato__botao {
     cursor: pointer;
     padding: 16px 12px;
-    background-color: #2A7AE4;
-    color: #fff;
+    background-color: var(--cor-de-botao);
+    color: var(--cor-de-texto);
 }
 
 /*footeer*/
@@ -431,6 +480,7 @@ section.footer{
 
 .footer__rodape {
     text-align: center;
+    color: var(--cor-de-font);
 }
 
 /* Chegou a hora de se desafiar com a responsividade, 
@@ -458,6 +508,10 @@ utilize como referência os breakpoints @media abaixo*/
     font-size: 22px;
 }
 
+.title__subsection {
+    font-size: 16px;
+}
+
 .title__profile {
     min-width: 146px;
 }
@@ -471,22 +525,44 @@ utilize como referência os breakpoints @media abaixo*/
     max-width: 547.6px;
 }
 
-.about__title{
+.about__title {
+    font-size: 22px;
     margin-bottom: 32px;
 }
+
 /*Skills*/
-
+.skills__title {
+    font-size: 22px;
+}
 /*Hobbies*/
-
+.hobbies__title {
+    font-size: 22px;
+}
 /*Formação Acadêmica*/
+.academic__title {
+    font-size: 22px;
+}
+
 .academic__courses {
     flex-direction: column;
+}
+
+.academic__courses__item__title {
+    font-size: 16px;
+}
+
+.academic__courses__item__subtitle {
+    font-size: 14px;
 }
 
 /*Experiências acadêmicas*/
 
 .experience {
     align-items: center;
+}
+
+.experience__section__title {
+    font-size: 22px;
 }
 
 .experiencie__box {
@@ -506,11 +582,31 @@ utilize como referência os breakpoints @media abaixo*/
     width: 100%;
 }
 
+.experience__title {
+    font-size: 16px;
+}
+
+.experience__text {
+    font-size: 14px;
+}
+
 
 /*Expeirência profissional*/
 
 .formcontato--esquerda {
     display: none;
+}
+
+.formcontato__title {
+    font-size: 22px;
+}
+
+.formcontato__input::placeholder {
+    font-size: 16px;
+}
+
+.formcontato__textarea::placeholder {
+    font-size: 16px;
 }
 
 }
@@ -524,6 +620,7 @@ utilize como referência os breakpoints @media abaixo*/
     .title__container {
         width: 100%;
     }
+
 
     .title__profile {
         max-width: 146px;
@@ -561,6 +658,7 @@ utilize como referência os breakpoints @media abaixo*/
 
 .menu__list__item__contato {
     display: block;
+    font-size: 14px;
 }
 /*Titulo*/
 .title__div {
