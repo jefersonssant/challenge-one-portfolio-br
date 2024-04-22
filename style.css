@@ -447,6 +447,11 @@ section.formcontato{
     color: var(--cor-de-font);
 }
 
+.formcontato__aviso__erro {
+    display: none;
+    color: #ff0000;
+}
+
 label {
     color: var(--cor-de-font);
 }
@@ -652,39 +657,44 @@ utilize como referência os breakpoints @media abaixo*/
 @media (max-width: 425px) {
 
 /*Menu*/
-.menu__list {
+    .menu__list {
     display: none;
-}
+    }
 
-.menu__list__item__contato {
+    .menu__list__item__contato {
     display: block;
     font-size: 14px;
-}
+    }
 /*Titulo*/
-.title__div {
+    .title__div {
     flex-direction: column;
     align-items: normal;
-}
+    }
 
-.title__container {
+    .title__container {
     width: 100%;
-}
+    }
 /*Sessão sobre*/
 
 /*Skills*/
 
-.skills__line {
+    .skills__line {
     flex-direction: row;
-}
+    }
 
-.skills__box {
+    .skills__box {
     min-width: 110px;
     flex-basis: 20%;
-}
+    }
 
-.hobbies__box {
+    .hobbies__box {
     min-width: 110px;
     flex-basis: 20%;
+    }
+
+    .formcontato {
+        min-width: 350px;
+    }
 }
 
 /*Hobbies*/
@@ -697,8 +707,3 @@ utilize como referência os breakpoints @media abaixo*/
 
 /*Footer*/
 
-.formcontato {
-    min-width: 350px;
-}
-
-}
