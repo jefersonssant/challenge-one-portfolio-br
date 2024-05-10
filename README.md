@@ -1,4 +1,4 @@
-# Challenge ONE | Front End - Portfólio
+# Portfólio
 
 ## Descrição
 Desafio de portifólio proposto pela Oracle Next Education mais Alura, site responsivo para diferentes tipos de tela, desenvolvido com flex-box e grid-layout, com formulário de contato e sua respectiva validação com JavaScript.
